@@ -1,24 +1,25 @@
-import './App.css';
+import React, {useEffect, useState} from 'react';
+import Networking from "./Networking";
+import Game from "./Game";
 
-function App() {
+import "./App.css";
+
+export default function App() {
+  const [games, setGames] = useState([]);
+  const loadGames = () => {
+    Networking.exec({
+      endpoint: client => client.apis.games.getAll,
+      success: result => setGames(result.body)
+    });
+  };
+  useEffect(() => {
+    loadGames();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="https://cdn-images-1.medium.com/max/1200/1*b76ZGyCEOHo88TxMnjU8zg.png" className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="app">
+        <h1>Games</h1>
+        {games && games.map(it => <Game game={it} key={it.id}/>)}
+      </div>
   );
 }
-
-export default App;

@@ -29,6 +29,19 @@ To run the frontend react application the `npm run start` command is used inside
 2. Execute `./mvnw clean package` to build the project and generate a jar.
 3. Run the jar using `java -jar ./target/quarkus-app/quarkus-run.jar`.
 
+## OpenAPI and Swagger
+
+This code automatically generates an [openapi schema](http://localhost:8080/q/openapi) and publishes a [Swagger UI](http://localhost:8080/q/swagger-ui/#/).
+
 ## Author(s)
 
 - [Tjeu Foolen](https://github.com/tjeufoolen)
+
+## References
+- [Build, run and deploy React app with Quarkus](https://medium.com/quarkify/build-run-and-deploy-react-app-with-quarkus-6cc4f6074d6)
+- [Setting up Swagger with Quarkus and React](https://medium.com/quarkify/setting-up-swagger-with-quarkus-and-react-a811c7ca5ace)
+- [Using Hibernate ORM and Jakarta Persistence ](https://quarkus.io/guides/hibernate-orm)
+- [Simplified Hibernate ORM with Panache](https://quarkus.io/guides/hibernate-orm-panache)
+- [Configure data sources in Quarkus](https://quarkus.io/guides/datasource)
+- [Quarkus: blocked by CORS policy](https://stackoverflow.com/questions/56959505/quarkus-blocked-by-cors-policy)
+- [Using OpenAPI and Swagger UI ](https://quarkus.io/guides/openapi-swaggerui)
