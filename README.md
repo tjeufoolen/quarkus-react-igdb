@@ -18,10 +18,10 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 
 For local development and auto recompiling you'll have to use two commands.
 
-To run the backend rest service the `./mvnw compile quarkus:dev` command is used.
+To run the backend rest service the `./mvnw compile quarkus:dev` command is used inside the root of the project.
 Disclaimer; this does not auto reload the page, only auto-recompile on refresh of the page.
 
-To run the frontend react application the `npm run start` command is used.
+To run the frontend react application the `npm run start` command is used inside `/src/main/webapp`.
 
 ## Create and run production jar
 
