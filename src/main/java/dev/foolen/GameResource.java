@@ -10,7 +10,7 @@ public class GameResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String hello() {
-        return "Hello from RESTEasy Reactive";
+    public String games() {
+        return "Hello, World!";
     }
 }

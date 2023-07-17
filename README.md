@@ -1,56 +1,34 @@
 # quarkus-react-igdb
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
-
+It is created using tips from [Dmytro Chaban medium post about setting up a quarkus project with react frontend](https://medium.com/quarkify/build-run-and-deploy-react-app-with-quarkus-6cc4f6074d6).
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
-## Running the application in dev mode
+## Prerequisites
+- Maven v3.9.0 or higher
+- JRE 17
 
-You can run your application in dev mode that enables live coding using:
-```shell script
-./mvnw compile quarkus:dev
-```
+## Getting started
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+1. Clone this project
+2. Navigate into the root of the project using `cd ./quarkus-react-igdb`.
+3. Execute `./mvnw clean package` to automatically download and install frontend tools.
 
-## Packaging and running the application
+## Development
 
-The application can be packaged using:
-```shell script
-./mvnw package
-```
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
+For local development and auto recompiling you'll have to use two commands.
 
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
+To run the backend rest service the `./mvnw compile quarkus:dev` command is used.
+Disclaimer; this does not auto reload the page, only auto-recompile on refresh of the page.
 
-If you want to build an _über-jar_, execute the following command:
-```shell script
-./mvnw package -Dquarkus.package.type=uber-jar
-```
+To run the frontend react application the `npm run start` command is used.
 
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
+## Create and run production jar
 
-## Creating a native executable
+1. Navigate to the root of the project.
+2. Execute `./mvnw clean package` to build the project and generate a jar.
+3. Run the jar using `java -jar ./target/quarkus-app/quarkus-run.jar`.
 
-You can create a native executable using: 
-```shell script
-./mvnw package -Pnative
-```
+## Author(s)
 
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
-```shell script
-./mvnw package -Pnative -Dquarkus.native.container-build=true
-```
-
-You can then execute your native executable with: `./target/quarkus-react-igdb-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.
-
-## Provided Code
-
-### RESTEasy Reactive
-
-Easily start your Reactive RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+- [Tjeu Foolen](https://github.com/tjeufoolen)
