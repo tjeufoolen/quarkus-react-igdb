@@ -23,6 +23,8 @@ Disclaimer; this does not auto reload the page, only auto-recompile on refresh o
 
 To run the frontend react application the `npm run start` command is used inside `/src/main/webapp`.
 
+After running the commands you can access the backend at [http://localhost:8080](http://localhost:8080) and the frontend at [http://localhost:3000](http://localhost:3000).
+
 ## Create and run production jar
 
 1. Navigate to the root of the project.
