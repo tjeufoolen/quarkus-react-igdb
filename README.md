@@ -1,7 +1,7 @@
 # quarkus-react-igdb
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
-It is created using tips from [Dmytro Chaban medium post about setting up a quarkus project with react frontend](https://medium.com/quarkify/build-run-and-deploy-react-app-with-quarkus-6cc4f6074d6).
+It is created using tips from [Dmytro Chaban's medium post](https://medium.com/quarkify/build-run-and-deploy-react-app-with-quarkus-6cc4f6074d6).
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
 ## Prerequisites
