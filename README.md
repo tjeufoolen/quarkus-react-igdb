@@ -47,3 +47,4 @@ This code automatically generates an [openapi schema](http://localhost:8080/q/op
 - [Configure data sources in Quarkus](https://quarkus.io/guides/datasource)
 - [Quarkus: blocked by CORS policy](https://stackoverflow.com/questions/56959505/quarkus-blocked-by-cors-policy)
 - [Using OpenAPI and Swagger UI ](https://quarkus.io/guides/openapi-swaggerui)
+- [Using the REST Client ](https://quarkus.io/guides/rest-client-reactive)

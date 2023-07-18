@@ -9,7 +9,10 @@ export default function App() {
   const loadGames = () => {
     Networking.exec({
       endpoint: client => client.apis.games.getAll,
-      success: result => setGames(result.body)
+      success: result => {
+        setGames(result.body);
+        console.log(result.body);
+      }
     });
   };
   useEffect(() => {
@@ -19,7 +22,7 @@ export default function App() {
   return (
       <div className="app">
         <h1>Games</h1>
-        {games && games.map(it => <Game game={it} key={it.id}/>)}
+        {/*{games && games.map(it => <Game game={it} key={it.id}/>)}*/}
       </div>
   );
 }
